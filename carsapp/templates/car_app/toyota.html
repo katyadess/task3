@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тойота</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'main' %}">Главная</a></li>
+            <li><a href="{% url "honda" %}">Honda</a></li>
+            <li><a href="{% url "renault" %}">Renault</a></li>
+        </ul>
+    </nav>
+    <h1>О компании {{ company }}</h1>
+    <p>{{ description }}</p>
+
+    <h3>История</h3>
+    <p>{{ history }}</p>
+
+    <h3>Популярные модели</h3>
+    <ul>
+        {% for model in models %}
+        <li>{{ model }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Инновации</h3>
+    <p>{{ innovations }}</p>
+
+    <h3>Факты</h3>
+    <ul>
+        {% for fact in facts %}
+        <li>{{ fact }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
