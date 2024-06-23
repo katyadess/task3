@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'car_app/css/main.css' %}">
     <title>Main</title>
 </head>
 <body>
-    <h1>Добро пожаловать на сайт автомобилей!</h1>
-    <nav>
-        <ul>
-            <li>Посмотреть информацию о <a href="{% url 'toyota' %}">Toyota</a></li>
-            <li>Посмотреть информацию о <a href="{% url 'honda' %}">Honda</a></li>
-            <li>Посмотреть информацию о <a href="{% url 'renault' %}">Renault</a></li>
-        </ul>
-    </nav>
+    <div class="content">
+        <h1>Добро пожаловать на сайт автомобилей!</h1>
+        <nav>
+            <ul>
+                <li>Посмотреть информацию о <a href="{% url 'toyota' %}">Toyota</a></li>
+                <li>Посмотреть информацию о <a href="{% url 'honda' %}">Honda</a></li>
+                <li>Посмотреть информацию о <a href="{% url 'renault' %}">Renault</a></li>
+            </ul>
+        </nav>
+    </div>
+
 </body>
 </html>
