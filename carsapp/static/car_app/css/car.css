@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: black;
+    font-family: sans-serif;
+}
+
+
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    font-weight: 550;
+    
+}
+
+    
+li, p {
+    letter-spacing: 2px;
+    list-style: none;
+}
+
+a {
+    padding: 1em 2em;
+    display: inline-block;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: blue;
+}
+
+.content {
+    padding: 3em 7em;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+h1 {
+    letter-spacing: 1px;
+}
+
+.intro, .history, .models, .innovations, .facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    padding: 4em;
+}
+
+img {
+    width: 100%; 
+    height: auto;
+}
+
+.car-facts, .car-models {
+    display: flex;
+    flex-direction: column;
+    gap: .7em;
+}

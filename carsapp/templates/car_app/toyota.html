@@ -1,39 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тойота</title>
+    <link rel="stylesheet" href="{% static "car_app/css/car.css" %}">
+    <title>Toyota</title>
 </head>
 <body>
     <nav>
-        <ul>
+        <ul class='navigation'>
             <li><a href="{% url 'main' %}">Главная</a></li>
             <li><a href="{% url "honda" %}">Honda</a></li>
             <li><a href="{% url "renault" %}">Renault</a></li>
         </ul>
     </nav>
-    <h1>О компании {{ company }}</h1>
-    <p>{{ description }}</p>
 
-    <h3>История</h3>
-    <p>{{ history }}</p>
+    <div class="content">
 
-    <h3>Популярные модели</h3>
-    <ul>
-        {% for model in models %}
-        <li>{{ model }}</li>
-        {% endfor %}
-    </ul>
+        <div class="intro">
+            <h1>О компании {{ company }}</h1>
+            <p>{{ description }}</p>
+        </div>
 
-    <h3>Инновации</h3>
-    <p>{{ innovations }}</p>
+        <img src="{% static "car_app/images/toyota.jpg" %}" alt="">
 
-    <h3>Факты</h3>
-    <ul>
-        {% for fact in facts %}
-        <li>{{ fact }}</li>
-        {% endfor %}
-    </ul>
+        <div class="history">
+            <h1>История</h1>
+            <p>{{ history }}</p>
+        </div>
+
+        <div class="models">
+            <h1>Популярные модели</h1>
+            <ul class="car-models">
+                {% for model in models %}
+                <li>{{ model }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="innovations">
+            <h1>Инновации</h1>
+            <p>{{ innovations }}</p>
+        </div>
+
+
+        <div class="facts">
+            <h1>Факты</h1>
+            <ul class="car-facts">
+                {% for fact in facts %}
+                <li>{{ fact }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+    </div>
 </body>
 </html>
